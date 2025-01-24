@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jaspinder - Personal Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="devphotot.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: #ede8f5;
+            font-family: cursive
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .pink{
+            display: flex;
+        }
+        .container{
+            position:relative;
+        }
+        .pinkbox{
+            position: absolute;
+            background-color: #3d52a0;
+            width: 100%;
+            height: 80px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .whitebox{
+            position: absolute;
+            background-color: #7091e6;
+            color: white;
+            width: 85%;
+            height: 50px;
+            margin-left: 7%;
+            z-index: 3;
+            top:60px;
+            padding-left: 10px;
+            padding-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px 0px #9cb5eb;
+        }
+        .drname{
+            font-family: cursive;
+        }
+        .drname:hover{
+            cursor: pointer;
+        }
+        .white{
+            display: flex;
+        }
+        .white ul{
+            flex: 1;
+            text-align: right;
+            margin-top: 5px;
+        }
+        .white ul li{
+            list-style: none;
+            display: inline-block;
+        }
+        .white ul li a{
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 12px;
+        }
+        .white ul li a:hover{
+            color: #ede8f5;
+        }
+        .home{
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            gap: 7em;
+            background-color: #adbbda67;
+            margin-bottom: 100px;
+        }
+        .myimg{
+            border-radius: 50%;
+            width: 500px;
+        }
+        .home-content{
+            max-width: 600px;
+            padding-left: 10%;
+        }
+        .home-content p{
+            font-size: 18px;
+            margin: 25px 0px 30px;
+        }
+        .home-content h3{
+            font-size: 42px;
+        }
+        .home-content h1{
+            font-size: 62px;
+            line-height: 1.2;
+        }
+        .home-content h1 span{
+            color: #3d52a0;
+        }
+
+        .projects{
+            
+        }
+        .projects-content{
+            text-align: center;
+        }
+        .projects-content h4{
+            color: #3d52a0;
+        }
+        .row1{
+            display: inline-flex;
+        }
+        .column1{
+            background-color: white;
+            margin-top: 50px;
+            margin-left: 20px;
+            max-width: 30%;
+            height: min-content;
+            box-shadow: 0px 5px 10px 0px #adbbda;
+            margin-bottom: 100px;
+            padding-bottom: 50px;
+            margin-right: 2%;
+           
+        }
+        .column1 a{
+            color: #7091e6;
+            text-decoration: none;
+            font-size: 25px;
+            margin: 20px;
+        }
+        .column1 a:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .column1 p{
+            margin-top: 20px;
+        }
+
+        .column2{
+            background-color: white;
+            margin-top: 50px;
+            margin-left: 20px;
+            max-width: 30%;
+            height: min-content;
+            box-shadow: 0px 5px 10px 0px #adbbda;
+            margin-bottom: 100px;
+            padding-bottom: 60px;
+            margin-right: 2%;
+        }
+        .column2 a{
+            color: #7091e6;
+            text-decoration: none;
+            font-size: 25px;
+            margin: 20px;
+        }
+        .column2 a:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .column2 p{
+            margin-top: 20px;
+        }
+
+        .column3{
+            background-color: white;
+            margin-top: 50px;
+            margin-left: 20px;
+            max-width: 30%;
+            height: min-content;
+            box-shadow: 0px 5px 10px 0px #adbbda;
+            margin-bottom: 100px;
+            padding-bottom: 93px;
+        }
+        .column3 a{
+            color: #7091e6;
+            text-decoration: none;
+            font-size: 25px;
+            margin: 20px;
+        }
+        .column3 a:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .column3 p{
+            margin-top: 20px;
+        }
+        .more-projects-content{
+            text-align: center;
+            margin-bottom: 100px;
+        }
+        .more-projects-content h2{
+            margin-bottom: 30px;
+        }
+        .gitbtn{
+            text-decoration: none;
+            border: 2px solid none;
+            padding: 10px 40px;
+            background-color: #3d52a0;
+            color: white;
+            font-size: 25px;
+        }
+        .contact-content{
+            background-color: #3d52a0;
+            height: 300px;
+        }
+        .contact-content h1{
+            color: white;
+            padding-top: 20px;
+            text-align: center;
+        }
+        .contact-content h1 a{
+            color: #efb11d;
+        }
+        .phnno:hover{
+            cursor: pointer;
+        }
+        .whitebox ul li button{
+
+        }
+    </style>
+    <script>
+        // JavaScript to handle the button click and scroll
+        document.getElementsByClassName('projects-btn').addEventListener('click', function() {
+            // Scroll smoothly to the target section
+            document.getElementsByClassName('projects').scrollIntoView({
+                behavior: 'smooth'  // This makes the scrolling smooth
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="pinkbox">
+        </div>
+        <div class="whitebox">
+            <nav class="white">
+                <h1 class="drname">Jaspinder Singh</h1>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/jaspinder-singh-53z187/" target="_blank">Linkedin</a></li>
+                    <li><a href="https://github.com/jaspindersingh919" target="_blank">Github</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section class="home">
+        <div class="home-content">
+            <h3>Hi</h3>
+
+            <h1>I'm <span>Jaspinder<br></span>a Developer</h1>
+
+            <p>Experience in programming languages like java, python and web development tools.</p>
+        </div>
+        <div class="imgbox">
+            <img src="mypic.png" alt="" class="myimg">
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="projects-content">
+            <h4>Portfolio</h4>
+
+            <h1>Personal Projects</h1>
+        </div>
+        <div class="row1">
+            <div class="column1">
+                <img src="game-img.png" style="width: 100%;height: 400px;"> 
+                <a href="#">Mavity Tree - Java game</a>
+                <p style="padding-left: 20px;padding-right: 20px;font-size: 16px;">A point based game developed as a group project during first year of the university. It is based on a TV show by Dr. Who. The game is built on Java and uses the conecpt of GUI.</p>
+            </div>
+
+            <div class="column2">
+                <img src="aeroplane.png" style="width: 100%;height: 400px;"> 
+                <a href="#">Airline Management System - <br>Python</a>
+                <p style="padding-left: 20px;padding-right: 20px;font-size: 16px;">Application based airline ticket booking system built on Python GUI.</p>
+            </div>
+
+            <div class="column3">
+                <img src="mainphotu.png" style="width: 100%;height: 400px;"> 
+                <a href="#">Clone School Website</a>
+                <p style="padding-left: 20px;padding-right: 20px;font-size: 16px;">Made a clone website of a school in New Delhi, India using HTML and CSS.</p>
+            </div>
+
+        </div>
+        <div class="more-projects-content">
+            <h2>For more projects</h2>
+            <a href="https://github.com/jaspindersingh919" target="_blank" class = "gitbtn">My Github</a>
+        </div>
+        <div class="contact-content">
+            <h1>Contact Me</h1>
+
+            <h1>Email: <a href="mailto:jaspindersingh919@gmail.com">jaspindersingh919@gmail.com</a> | <a href="mailto:jaspinder.singh919@unb.ca">jaspinder.singh919@unb.ca</a></h1>
+
+            <h1>Phone: <span style="color: #efb11d; text-decoration: underline;" class="phnno">506-721-2969</span></h1>
+        </div>
+    </section>
+
+    
+</body>
+</html>
